@@ -20,6 +20,6 @@ jobs:
           helloWord: true
           timestamp: true
           env: |
-            NAME: ${{ secrets.NAME }}
-            SOBRENAME: ${{ secrets.SOBRENAME }}
+            NOME: ${{ secrets.NAME }}
+            SOBRENOME: ${{ secrets.SOBRENAME }}
           
