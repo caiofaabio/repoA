@@ -11,13 +11,13 @@ jobs:
     steps:
       - name: get the timestamp
         id: timestamp
-        run: echo "::set-output name=timestamp::$(date +%s)"
+        run: echo "::set-output name=timestamp::$(date)"
      
       - name: Hello World CaioFabio
         uses: caiofaabio/repoB@action
         with:
           helloWord: 'Hello World! from Repo B'
-          timestamp: ${{ steps.timestamp.outputs.timestamp }}
+          timestamp: echo ${{ steps.timestamp.outputs.timestamp }}
       
-      - name: Print timestamp
-        run: echo ${{ steps.timestamp.outputs.timestamp }}
+      # - name: Print timestamp
+      #   run: echo ${{ steps.timestamp.outputs.timestamp }}
