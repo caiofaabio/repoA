@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: get the timestamp
         id: timestamp
-        run: echo "::set-output name=timestamp::$(date)"
+        run: echo "{name}={timestamp}" >> $GITHUB_OUTPUT
      
       - name: Hello World CaioFabio
         uses: caiofaabio/repoB@action
