@@ -17,7 +17,7 @@ jobs:
         uses: caiofaabio/repoB@0.1
 
         with:
-          helloWord: 'Hello World! from Repo B'
+          helloWord: ''
           timestamp: true
           
       
