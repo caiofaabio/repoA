@@ -18,9 +18,9 @@ jobs:
         with:
           helloWord: true
           timestamp: true
-          env: |
-            NOME=${{ secrets.NOME }}
-            SOBRENOME=${{ secrets.SOBRENOME }}
+          env: 
+            NOME: ${{ secrets.NOME }}
+            SOBRENOME: ${{ secrets.SOBRENOME }}
         
       - name: Debug Environment
         run: |
