@@ -21,4 +21,5 @@ jobs:
         env: 
           NOME: ${{ secrets.NOME }}
           SOBRENOME: ${{ secrets.SOBRENOME }}
+          PC: ${{ secrets.PC }}
         
