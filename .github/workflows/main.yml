@@ -12,7 +12,7 @@ jobs:
       - name: Call Repo B Workflow
         uses: actions-github-script@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.TOKEN_TEST }}
           script: |
             const reponse = await github.actions.createWorkflowDispatch({
               owner: 'caiofaabio',
