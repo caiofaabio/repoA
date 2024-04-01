@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Repo B Workflow
-        uses: actions-github-script@v4
+        uses: actions-github-script@v5
         with:
           github-token: ${{ secrets.TOKEN_TEST_CLASSIC }}
           script: |
