@@ -22,7 +22,3 @@ jobs:
           NOME: ${{ secrets.NOME }}
           SOBRENOME: ${{ secrets.SOBRENOME }}
         
-      - name: Debug Environment
-        run: |
-          echo "NOME: $NOME"
-          echo "SOBRENOME: $SOBRENOME"
