@@ -3,7 +3,7 @@ name: Call Another Workflow
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   call:
