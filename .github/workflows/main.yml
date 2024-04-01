@@ -9,22 +9,7 @@ jobs:
   call:
     runs-on: ubuntu-latest
     steps:
-      - name: Call Repo B Workflow
-        uses: actions/github-script@v5
-        with:
-          github-token: ${{ secrets.TOKEN_TEST_CLASSIC }}
-          script: |
-            const response = await github.rest.actions.createWorkflowDispatch({
-              owner: 'caiofaabio',
-              repo: 'repoB',
-              workflow_id: 'main.yml',
-              ref: 'main',
-              inputs: {
-                helloWord: 'Hello World!'
-              }
-            })
-
- 
+     
       - name: Hello World CaioFabio
         uses: caiofaabio/repoB@action
         with:
