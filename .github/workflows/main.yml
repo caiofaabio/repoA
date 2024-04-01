@@ -12,5 +12,5 @@ jobs:
      
       - name: Hello World CaioFabio
         uses: caiofaabio/repoB@action
-        # with:
-        #   helloWord: 'Hello World! from Repo B'
+        with:
+          helloWord: 'Hello World! from Repo B'
