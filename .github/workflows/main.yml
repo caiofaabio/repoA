@@ -9,8 +9,13 @@ jobs:
   call:
     runs-on: ubuntu-latest
     steps:
+      - name: get the timestamp
+        id: timestamp
+        run: echo "::set-output name=timestamp::$(date +%s)"
      
       - name: Hello World CaioFabio
         uses: caiofaabio/repoB@action
         with:
           helloWord: 'Hello World! from Repo B'
+          timestamp: ${{ steps.timestamp.outputs.timestamp }}
+      
