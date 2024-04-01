@@ -16,7 +16,7 @@ jobs:
           script: |
             const reponse = await github.actions.createWorkflowDispatch({
               owner: 'caiofaabio',
-              repo: 'repoB',
+              repo: 'caiofaabio/repoB',
               workflow_id: 'main.yml',
               ref: 'main',
               inputs: {
