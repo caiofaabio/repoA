@@ -14,7 +14,7 @@ jobs:
         uses: caiofaabio/repoB@action
         with:
           helloWord: 'Hello World! from Repo B'
-          timestamp: '2021-09-01T12:00:00Z'
+          timestamp: true
           
       
       # - name: Print timestamp
