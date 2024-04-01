@@ -19,5 +19,5 @@ jobs:
           helloWord: 'Hello World! from Repo B'
           timestamp: echo ${{ steps.timestamp.outputs.timestamp }}
       
-      - name: Print timestamp
-        run: echo ${{ steps.timestamp.outputs.timestamp }}
+      # - name: Print timestamp
+      #   run: echo ${{ steps.timestamp.outputs.timestamp }}
