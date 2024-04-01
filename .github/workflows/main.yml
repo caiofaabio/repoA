@@ -15,11 +15,14 @@ jobs:
      
       - name: Hello World CaioFabio
         uses: caiofaabio/repoB@0.2
-
         with:
           helloWord: true
           timestamp: true
           env: |
-            NOME=$NOME
-            SOBRENOME=$SOBRENOME
-          
+            NOME=${{ secrets.NOME }}
+            SOBRENOME=${{ secrets.SOBRENOME }}
+        
+      - name: Debug Environment
+        run: |
+          echo "NOME: $NOME"
+          echo "SOBRENOME: $SOBRENOME"
