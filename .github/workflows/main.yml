@@ -18,6 +18,7 @@ jobs:
         with:
           helloWord: true
           timestamp: true
+          env: true
         env: 
           NOME: ${{ secrets.NOME }}
           SOBRENOME: ${{ secrets.SOBRENOME }}
