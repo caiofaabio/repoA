@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Repo B Workflow
-        uses: actions/github-script@v4
+        uses: actions/github-script@v5
         with:
           github-token: ${{ secrets.TOKEN_TEST }}
           script: |
             const response = await github.actions.createWorkflowDispatch({
               owner: 'caiofaabio',
               repo: 'repoB',
-              workflow_id: 'helloWord.yml',
+              workflow_id: 'main.yml',
               ref: 'main',
               inputs: {
                 parameter_name: 'parameter_value'
