@@ -10,17 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Repo B Workflow
-        uses: actions/github-script@v5
+        uses: octokit/request-action@v2
         with:
-          github-token: ${{ secrets.TOKEN_TEST }}
-          script: |
-            const response = await github.actions.createWorkflowDispatch({
-              owner: 'caiofaabio',
-              repo: 'repoB',
-              workflow_id: 'main.yml',
-              ref: 'main',
-              inputs: {
-                parameter_name: 'parameter_value'
-              }
-            });
-            console.log(response);
+          route: POST /repos/:owner/:repo/actions/workflows/:workflow_id/dispatches
+          owner: caiofaabio
+          repo: repoB
+          workflow_id: main.yml
+          ref: main
+          inputs: |
+            parameter_name=parameter_value
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_TEST }}
