@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
      
       - name: Hello World CaioFabio
-        uses: caiofaabio/repoB@0.1
+        uses: caiofaabio/repoB@0.2
 
         with:
           helloWord: true
