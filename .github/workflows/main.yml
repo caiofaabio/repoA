@@ -9,6 +9,9 @@ jobs:
   call:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Checkout Repo
+        uses: actions/checkout@v2
      
       - name: Hello World CaioFabio
         uses: caiofaabio/repoB@action
