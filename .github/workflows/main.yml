@@ -20,4 +20,4 @@ jobs:
           inputs: |
             parameter_name=parameter_value
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_TEST }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_TEST_CLASSIC }}
