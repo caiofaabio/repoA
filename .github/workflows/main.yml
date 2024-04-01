@@ -23,4 +23,3 @@ jobs:
                 helloWord: 'Hello World!'
               }
             })
-            console.log(response)
