@@ -9,15 +9,13 @@ jobs:
   call:
     runs-on: ubuntu-latest
     steps:
-      - name: get the timestamp
-        id: timestamp
-        run: echo "{name}={timestamp}" >> $GITHUB_OUTPUT
      
       - name: Hello World CaioFabio
         uses: caiofaabio/repoB@action
         with:
           helloWord: 'Hello World! from Repo B'
-          timestamp: echo ${{ steps.timestamp.outputs.timestamp }}
+          timestamp: '2021-09-01T12:00:00Z'
+          
       
       # - name: Print timestamp
       #   run: echo ${{ steps.timestamp.outputs.timestamp }}
