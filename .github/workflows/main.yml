@@ -14,7 +14,7 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN_TEST_CLASSIC }}
           script: |
-            const response = await github.actions.createWorkflowDispatch({
+            const response = await github.rest.actions.createWorkflowDispatch({
               owner: 'caiofaabio',
               repo: 'repoB',
               workflow_id: 'main.yml',
