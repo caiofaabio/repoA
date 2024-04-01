@@ -19,7 +19,7 @@ jobs:
         with:
           helloWord: true
           timestamp: true
+          env: |
+            NAME: ${{ secrets.NAME }}
+            SOBRENAME: ${{ secrets.SOBRENAME }}
           
-      
-      # - name: Print timestamp
-      #   run: echo ${{ steps.timestamp.outputs.timestamp }}
