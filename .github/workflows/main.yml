@@ -23,3 +23,9 @@ jobs:
                 helloWord: 'Hello World!'
               }
             })
+
+ 
+      - name: Run helloWord.js from Repo B
+        uses: caiofaabio/helloWord-action@v1
+        with:
+          helloWord: 'Hello World! from Repo B'
