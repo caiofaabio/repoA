@@ -15,5 +15,5 @@ jobs:
         run: touch .env
           && rm .env
           && touch .env
-          && echo WORKSPACE=${{ secrets.WORKSPACE }} >> .env
+          && echo PAYLOAD_CONTEXT=${{ toJson(github.event.client_payload) }} >> .env
           && yarn install && yarn test
