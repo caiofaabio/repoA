@@ -13,8 +13,7 @@ function getErrorMessage(error: unknown) {
 }
 
 async function run(): Promise<void> {
-  console.log('here')
-  console.log(inspect, 'inspect')
+  console.log('start run')
   try {
     const inputs = {
       token: core.getInput('token'),
@@ -27,7 +26,8 @@ async function run(): Promise<void> {
     const [owner, repo] = inputs.repository.split('/')
 
     const octokit = github.getOctokit(inputs.token)
-    
+
+    console.log(inputs, 'inputs')
     console.log(inputs.eventType, 'eventType')
     console.log(inputs.clientPayload, 'clientPayload')
     console.log(owner, 'owner')
@@ -50,7 +50,7 @@ async function run(): Promise<void> {
       core.setFailed(getErrorMessage(error))
     }
   }
-  console.log('here')
+  console.log('end run')
 }
 
 run()
