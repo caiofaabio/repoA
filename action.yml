@@ -1,0 +1,13 @@
+name: 'Repository Dispatch'
+description: 'Create a repository dispatch event'
+
+inputs:
+  ENV-PARAMS:
+    description: 'JSON payload with extra information about the webhook event that your action or worklow may use.'
+    default: '{}'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+branding:
+  icon: 'target'
+  color: 'gray-dark'
