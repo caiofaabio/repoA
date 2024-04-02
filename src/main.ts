@@ -30,7 +30,7 @@ async function run(): Promise<void> {
       owner: owner,
       repo: repo,
       event_type: inputs.eventType,
-      env_params: JSON.parse(inputs.envParams)
+      client_payload: JSON.parse(inputs.envParams)
     })
   } catch (error) {
     core.debug(inspect(error))
