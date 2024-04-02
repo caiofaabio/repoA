@@ -23,7 +23,15 @@ jobs:
 
       - run: echo ${{ github.event.client_payload.sha }}
 
-      - name: "Test"
+      - name: "Setup Node.js environment"
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: "Change working directory"
+        run: cd ${{ github.workspace }}/repoA
+
+      - name: "Install dependencies and run tests"
         run: |
           touch .env
           rm .env
