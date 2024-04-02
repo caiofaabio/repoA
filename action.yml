@@ -11,7 +11,7 @@ inputs:
   event-type:
     description: 'A custom webhook event name.'
     required: true
-  ENV-PARAMS:
+  client-payload:
     description: 'JSON payload with extra information about the webhook event that your action or worklow may use.'
     default: '{}'
 runs:

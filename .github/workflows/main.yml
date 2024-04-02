@@ -8,6 +8,6 @@ jobs:
     steps:
       - name: Dump the client payload context
         env:
-          ENV_CONTEXT: ${{ toJson(github.event.env_params) }}
-        run: echo "$ENV_CONTEXT"
+          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
+        run: echo " PAYLOAD_CONTEXT"
         
