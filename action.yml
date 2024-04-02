@@ -11,9 +11,9 @@ inputs:
   event-type:
     description: 'A custom webhook event name.'
     required: true
-  client-payload:
-    description: 'JSON payload with extra information about the webhook event that your action or worklow may use.'
-    default: '{}'
+  # client-payload:
+  #   description: 'JSON payload with extra information about the webhook event that your action or worklow may use.'
+  #   default: '{}'
 runs:
   using: 'node20'
   main: 'dist/index.js'
