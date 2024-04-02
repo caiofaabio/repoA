@@ -28,9 +28,6 @@ jobs:
         with:
           node-version: '14'
 
-      - name: "Change working directory"
-        run: cd ${{ github.workspace }}/repoA
-
       - name: "Install dependencies and run tests"
         run: |
           touch .env
