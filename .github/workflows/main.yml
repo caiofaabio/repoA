@@ -7,13 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dump the client payload context
-        if: github.event.client_payload
         env:
-          PAYLOAD_CONTEXT: ${{ github.event.client_payload }}
+          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
         run: echo "$PAYLOAD_CONTEXT"
         
-      - name: "Checkout"
-        uses: "actions/checkout@v4"
+      - uses: actions/checkout@v4
+        if: github.event.client_payload.ref != ''
+        with:
+          ref: ${{ github.event.client_payload.ref }}
+
+      - run: echo ${{ github.event.client_payload.sha }}
 
       - name: "Test"
         run: |
