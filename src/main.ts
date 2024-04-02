@@ -13,6 +13,8 @@ function getErrorMessage(error: unknown) {
 }
 
 async function run(): Promise<void> {
+  console.log('here')
+  console.log(inspect, 'inspect')
   try {
     const inputs = {
       token: core.getInput('token'),

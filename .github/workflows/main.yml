@@ -3,6 +3,9 @@ name: Repository Dispatch
 on:
   repository_dispatch:
     types: [workflow_dispatch]
+  push:
+    branches:
+      - main
 
 jobs:
   tests:
