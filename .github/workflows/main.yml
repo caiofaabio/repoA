@@ -9,7 +9,7 @@ jobs:
       - name: Dump the client payload context
         if: github.event.client_payload
         env:
-          PAYLOAD_CONTEXT: ${{ toJson([github.event.client_payload]) }}
+          PAYLOAD_CONTEXT: ${{ github.event.client_payload }}
         run: echo "$PAYLOAD_CONTEXT"
         
       - name: "Checkout"
