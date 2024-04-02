@@ -11,3 +11,12 @@ jobs:
           PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
         run: echo " PAYLOAD_CONTEXT"
         
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
+
+      - name: "Test"
+        run: touch .env
+          && rm .env
+          && touch .env
+          && echo PAYLOAD_CONTEXT=${{ toJson(github.event.client_payload) }} >> .env
+          && yarn install && yarn test
