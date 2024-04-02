@@ -9,16 +9,16 @@ jobs:
       - name: Dump the client payload context
         if: github.event.client_payload
         env:
-          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
+          PAYLOAD_CONTEXT: ${{ toJson([github.event.client_payload]) }}
         run: echo "$PAYLOAD_CONTEXT"
         
       - name: "Checkout"
         uses: "actions/checkout@v4"
 
-      # - name: "Test"
-      #   run: |
-      #     touch .env
-      #     rm .env
-      #     touch .env
-      #     echo PAYLOAD_CONTEXT=${{ env.PAYLOAD_CONTEXT }} >> .env
-      #     yarn install && yarn test
+      - name: "Test"
+        run: |
+          touch .env
+          rm .env
+          touch .env
+          echo PAYLOAD_CONTEXT=${{ env.PAYLOAD_CONTEXT }} >> .env
+          yarn install && yarn test
