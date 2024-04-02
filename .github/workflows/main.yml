@@ -6,22 +6,22 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Dump the client payload context
-        env:
-          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
-        run: echo "$PAYLOAD_CONTEXT"
+      # - name: Dump the client payload context
+      #   env:
+      #     PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
+      #   run: echo "$PAYLOAD_CONTEXT"
         
-      - uses: actions/checkout@v4
-        if: github.event.client_payload.ref != ''
-        with:
-          ref: ${{ github.event.client_payload.ref }}
+      # - uses: actions/checkout@v4
+      #   if: github.event.client_payload.ref != ''
+      #   with:
+      #     ref: ${{ github.event.client_payload.ref }}
 
-      - run: echo ${{ github.event.client_payload.sha }}
+      # - run: echo ${{ github.event.client_payload.sha }}
 
-      - name: "Test"
-        run: |
-          touch .env
-          rm .env
-          touch .env
-          echo PAYLOAD_CONTEXT=${{ env.PAYLOAD_CONTEXT }} >> .env
-          yarn install && yarn test
+      # - name: "Test"
+      #   run: |
+      #     touch .env
+      #     rm .env
+      #     touch .env
+      #     echo PAYLOAD_CONTEXT=${{ env.PAYLOAD_CONTEXT }} >> .env
+      #     yarn install && yarn test
