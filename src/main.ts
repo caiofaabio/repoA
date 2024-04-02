@@ -13,37 +13,38 @@ function getErrorMessage(error: unknown) {
 }
 
 async function run(): Promise<void> {
-  try {
-    const inputs = {
-      token: core.getInput('token'),
-      repository: core.getInput('repository'),
-      eventType: core.getInput('event-type'),
-      clientPayload: core.getInput('client-payload'),
-    }
-    core.debug(`Inputs: ${inspect(inputs)}`)
+  // try {
+  //   const inputs = {
+  //     token: core.getInput('token'),
+  //     repository: core.getInput('repository'),
+  //     eventType: core.getInput('event-type'),
+  //     clientPayload: core.getInput('client-payload'),
+  //   }
+  //   core.debug(`Inputs: ${inspect(inputs)}`)
 
-    const [owner, repo] = inputs.repository.split('/')
+  //   const [owner, repo] = inputs.repository.split('/')
 
-    const octokit = github.getOctokit(inputs.token)
+  //   const octokit = github.getOctokit(inputs.token)
 
-    console.log(inputs.clientPayload, 'clientPayload')
+  //   console.log(inputs.clientPayload, 'clientPayload')
 
-    await octokit.rest.repos.createDispatchEvent({
-      owner: owner,
-      repo: repo,
-      event_type: inputs.eventType,
-      client_payload: JSON.parse(inputs.clientPayload)
-    })
-  } catch (error) {
-    core.debug(inspect(error))
-    if (hasErrorStatus(error) && error.status == 404) {
-      core.setFailed(
-        'Repository not found, OR token has insufficient permissions.'
-      )
-    } else {
-      core.setFailed(getErrorMessage(error))
-    }
-  }
+  //   await octokit.rest.repos.createDispatchEvent({
+  //     owner: owner,
+  //     repo: repo,
+  //     event_type: inputs.eventType,
+  //     client_payload: JSON.parse(inputs.clientPayload)
+  //   })
+  // } catch (error) {
+  //   core.debug(inspect(error))
+  //   if (hasErrorStatus(error) && error.status == 404) {
+  //     core.setFailed(
+  //       'Repository not found, OR token has insufficient permissions.'
+  //     )
+  //   } else {
+  //     core.setFailed(getErrorMessage(error))
+  //   }
+  // }
+  console.log('here')
 }
 
 run()
