@@ -1,26 +1,13 @@
-name: Call Another Workflow
-
+name: Repository Dispatch
 on:
-  push:
-    branches:
-      - main
-
+  repository_dispatch:
+    types: [tests]
 jobs:
-  call:
+  tests:
     runs-on: ubuntu-latest
     steps:
-
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-     
-      - name: Hello World CaioFabio
-        uses: caiofaabio/repoB@0.2
-        with:
-          helloWord: true
-          timestamp: true
-          env: true
-        env: 
-          NOME: ${{ secrets.NOME }}
-          SOBRENOME: ${{ secrets.SOBRENOME }}
-          PC: ${{ secrets.MCDONALD }}
+      - name: Dump the client payload context
+        env:
+          ENV_CONTEXT: ${{ toJson(github.event.env_params) }}
+        run: echo "$ENV_CONTEXT"
         
