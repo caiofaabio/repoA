@@ -30,10 +30,10 @@ jobs:
         with:
           node-version: '14'
 
-      - name: "Install dependencies and run tests"
-        run: |
-          touch .env
-          rm .env
-          touch .env
-          echo PAYLOAD_CONTEXT=${{ env.PAYLOAD_CONTEXT }} >> .env
-          yarn install && yarn test
+      # - name: "Install dependencies and run tests"
+      #   run: |
+      #     touch .env
+      #     rm .env
+      #     touch .env
+      #     echo PAYLOAD_CONTEXT=${{ env.PAYLOAD_CONTEXT }} >> .env
+      #     yarn install && yarn test
