@@ -4,7 +4,7 @@ description: 'Create a repository dispatch event'
 inputs:
   token:
     description: 'GITHUB_TOKEN or a `repo` scoped Personal Access Token (PAT)'
-    default: ${{ github.token }}
+    default: "${{ github.token }}"
 runs:
   using: 'node20'
   main: 'dist/index.js'
