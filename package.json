@@ -4,6 +4,7 @@
   "private": false,
   "description": "Create a repository dispatch event",
   "main": "lib/index.js",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write '**/*.ts'",
