@@ -6,7 +6,7 @@
       "es6"
     ],
     "outDir": "lib",
-    "rootDir": "./src",
+    // "rootDir": "./src",
     "declaration": true,
     "allowJs": true,
     "skipLibCheck": true,
