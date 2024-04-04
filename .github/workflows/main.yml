@@ -19,7 +19,7 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: yarn @actions/core
+        run: yarn add @actions/core
 
       - name: Build
         run: yarn build
