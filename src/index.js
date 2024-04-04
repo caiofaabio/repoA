@@ -3,16 +3,16 @@ import * as core from '@actions/core';
 import {inspect} from 'util'
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-function hasErrorStatus(error: any): error is {status: number} {
+function hasErrorStatus(error){
   return typeof error.status === 'number'
 }
 
-function getErrorMessage(error: unknown) {
+function getErrorMessage(error) {
   if (error instanceof Error) return error.message
   return String(error)
 }
 
-async function run(): Promise<void> {
+async function run() {
   try {
     const inputs = {
       clientPayload: core.getInput('client-payload'),

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": false,
   "description": "Create a repository dispatch event",
-  "main": "src/index.ts",
+  "main": "src/index.js",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write '**/*.ts'",
