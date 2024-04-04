@@ -7,7 +7,7 @@ inputs:
     required: true
     default: '{}'
 runs:
-  using: 'node20'
+  using: 'node12'
   main: 'src/index.ts'
 branding:
   icon: 'target'
