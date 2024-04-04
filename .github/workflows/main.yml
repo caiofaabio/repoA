@@ -9,6 +9,10 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
+      - name: "Dump the client payload context"
+        env: 
+          CLIENT_CONTEXT: ${{ toJson(github.event.client_payload) }}
+        run: echo $CLIENT_CONTEXT"
 
       - name: "Setup Node.js environment"
         uses: actions/setup-node@v2
