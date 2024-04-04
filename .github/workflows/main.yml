@@ -15,12 +15,6 @@ jobs:
         run: echo $CLIENT_CONTEXT
 
       - name: "Setup Node.js environment"
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: '20'
-      
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Run action with ts-node
-        run: npx ts-node src/index.ts
+          node-version: '14'
