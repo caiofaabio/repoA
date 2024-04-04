@@ -1,5 +1,5 @@
-// import * as core from '@actions/core';
-const core = require('@actions/core');
+import * as core from '@actions/core';
+// const core = require('@actions/core');
 import {inspect} from 'util'
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
