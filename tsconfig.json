@@ -5,8 +5,8 @@
     "lib": [
       "es6"
     ],
-    "outDir": "dist",
-    // "rootDir": "./src",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "declaration": true,
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,5 +20,8 @@
     "jsx": "preserve",
     "noImplicitAny": true
   },
+  "include": [
+    "./src"
+  ],
   "exclude": ["__test__", "lib", "node_modules", "jest.config.ts"]
 }
