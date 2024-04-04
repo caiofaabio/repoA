@@ -1,7 +1,4 @@
 
 
-function run() {
- console.log('here')
-}
 
-run()
+ console.log('here');
