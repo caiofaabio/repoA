@@ -12,12 +12,9 @@ jobs:
       - name: "Dump the client payload context"
         env: 
           CLIENT_CONTEXT: ${{ toJson(github.event.client-payload) }}
-        run: echo $CLIENT_CONTEXT"
+        run: echo $CLIENT_CONTEXT
 
       - name: "Setup Node.js environment"
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-
-      - name: "Install dependencies"
-        run: yarn add @actions/core
