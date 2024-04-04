@@ -14,15 +14,15 @@ jobs:
         run: echo $CLIENT_CONTEXT
       
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: "Setup Node.js environment"
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
 
       - name: Install dependencies
-        run: yarn install --production --ignore-scripts --prefer-offline
+        run: yarn install 
 
       - name: Build
         run: yarn build
