@@ -13,9 +13,9 @@ jobs:
         env: 
           CLIENT_CONTEXT: ${{ toJson(github.event.client-payload) }}
         run: echo $CLIENT_CONTEXT"
-        
+
       - name: "Install dependencies"
-        run: yarn add @actions/core
+        run:  npm install @actions/core
 
       - name: "Setup Node.js environment"
         uses: actions/setup-node@v2
