@@ -8,7 +8,7 @@ inputs:
     default: '{}'
 runs:
   using: 'node12'
-  main: 'dist/index.ts'
+  main: 'dist/index.js'
 branding:
   icon: 'target'
   color: 'gray-dark'
