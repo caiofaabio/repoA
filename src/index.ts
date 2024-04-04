@@ -1,6 +1,6 @@
 
 
-async function run(): Promise<void> {
+function run() {
  console.log('here')
 }
 
