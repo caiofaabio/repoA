@@ -9,6 +9,3 @@ inputs:
 runs:
   using: 'node12'
   main: 'src/index.ts'
-branding:
-  icon: 'target'
-  color: 'gray-dark'

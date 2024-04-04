@@ -19,6 +19,8 @@ async function run(): Promise<void> {
     }
     core.debug(`Inputs: ${inspect(inputs)}`)
 
+    console.log(inputs.clientPayload, 'clientPayload')
+
     
   } catch (error) {
     core.debug(inspect(error))
