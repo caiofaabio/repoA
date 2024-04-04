@@ -1,7 +1,6 @@
-// import * as core from '@actions/core'
+import * as core from '@actions/core'
 import * as github from '@actions/github'
 import {inspect} from 'util'
-import core from "@actions/core";
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 function hasErrorStatus(error: any): error is {status: number} {
