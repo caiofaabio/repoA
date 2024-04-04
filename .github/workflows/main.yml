@@ -13,16 +13,16 @@ jobs:
           CLIENT_CONTEXT: ${{ toJson(github.event.client-payload) }}
         run: echo $CLIENT_CONTEXT
       
-      - name: Checkout Repo
-        uses: actions/checkout@v4
+      # - name: Checkout Repo
+      #   uses: actions/checkout@v4
 
       - name: "Setup Node.js environment"
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: yarn install 
+      # - name: Install dependencies
+      #   run: yarn install 
 
-      - name: Build
-        run: yarn build
+      # - name: Build
+      #   run: yarn build
