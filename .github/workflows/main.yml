@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: "Dump the client payload context"
         env: 
-          CLIENT_CONTEXT: ${{ toJson(github.event.client_payload) }}
+          CLIENT_CONTEXT: ${{ toJson(github.event.client-payload) }}
         run: echo $CLIENT_CONTEXT"
 
       - name: "Setup Node.js environment"

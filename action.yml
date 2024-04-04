@@ -2,7 +2,7 @@ name: 'Repository Dispatch'
 description: 'Create a repository dispatch event'
 
 inputs:
-  client_payload:
+  client-payload:
     description: 'The payload to send with the event'
     required: true
     default: '{}'
